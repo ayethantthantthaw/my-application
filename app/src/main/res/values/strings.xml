@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">WalMal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_cart">Cart</string>
+    <string name="title_activity_account">Account</string>
+    <string name="title_activity_login">Login</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="loader_text">Hello</string>
+    <string name="title_activity_product__detail">Product_Detail</string>
+    <string name="color">Color:Red</string>
+    <string name="style">Style:Apparel,Sports</string>
+    <string name="season">Season:String/Summer</string>
+    <string name="usage">Usage:fitness</string>
+    <string name="Sport">Sport:fitness</string>
+    <string name="brand">Brand:Shock Absorber</string>
+    <string name="Des">Raw denim you probably have not heard of them jean shorts Austin.
+        Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor,
+        williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+        Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+        Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+        Raw denim you probably have not heard of them jean shorts Austin.\n
+
+        Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor,
+        williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+        Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+        Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.\n
+        Raw denim you probably have not heard of them jean shorts Austin.
+        Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor,
+        williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+        Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+        Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+
+    </string>
+    <string name="color_prompt">Color</string>
+    <string-array name="color_arrays">
+        <item>Red</item>
+        <item>Pink</item>
+        <item>Berry</item>
+        <item>Apricot</item>
+
+    </string-array>
+    <string name="Material_prompt">Material</string>
+    <string-array name="Material_arrays">
+        <item>Material_1</item>
+        <item>Material_2</item>
+        <item>Material_3</item>
+        <item>Material_4</item>
+
+    </string-array>
+    <string name="user_role_array">User Role</string>
+    <string-array name="user_role_prompt">
+        <item>Customer</item>
+        <item>Seller</item>
+
+
+    </string-array>
+    <string-array name="catagory_list">
+
+        <item>Watches</item>
+        <item>Jewellery</item>
+        <item>Home Accessories</item>
+        <item>Clothes</item>
+        <item>Shoes</item>
+        <item>Handmade</item>
+        <item>Phones</item>
+        <item>Laptops</item>
+        <item>Food</item>
+    </string-array>
+
+    <string-array name="status_list">
+        <item>On Hold</item>
+        <item>Delivered</item>
+    </string-array>
+    <string name="title_activity_seller">Seller</string>
+    <string name="order">Orders</string>
+    <string name="total">Total</string>
+    <string name="sell">Sell</string>
+    <string name="home">Home</string>
+
+
+</resources>
