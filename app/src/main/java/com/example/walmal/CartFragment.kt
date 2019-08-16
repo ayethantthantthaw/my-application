@@ -16,7 +16,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class Cart : Fragment() {
+class CartFragment : Fragment() {
 
     lateinit var  postList2:MutableList<PostCart>
     override fun onCreateView(

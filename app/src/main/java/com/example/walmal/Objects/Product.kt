@@ -7,6 +7,4 @@ object Product {
     var price:String=""
     var qty:String=""
     var product_content:String=""
-
-
 }

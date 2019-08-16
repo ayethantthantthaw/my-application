@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.example.walmal.Categories
+import com.example.walmal.CategoryActivity
 import com.example.walmal.R
 import com.example.walmal.post.Postsc
 import kotlinx.android.synthetic.main.categories_list_item.view.*
 
 
-class Categories_RecyclerViewAdapter(private var listc: List<Postsc>,private var context:Context?):
-    RecyclerView.Adapter<Categories_RecyclerViewAdapter.Myholderc>(){
+class CategoriesListRecyclerViewAdapter(private var listc: List<Postsc>, private var context:Context?):
+    RecyclerView.Adapter<CategoriesListRecyclerViewAdapter.Myholderc>(){
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): Myholderc {
         val view=LayoutInflater.from(p0.context).inflate(R.layout.categories_list_item,p0,false)
         return Myholderc(view)
@@ -29,7 +29,7 @@ class Categories_RecyclerViewAdapter(private var listc: List<Postsc>,private var
         p0.title.text=postsc.cat_title
 
         p0.itemView.tv_categories.setOnClickListener {
-           val c= Intent(context!!, Categories::class.java)
+           val c= Intent(context!!, CategoryActivity::class.java)
             c.putExtra("c_id",postsc.cat_id)
             context!!.startActivity(c)
         }

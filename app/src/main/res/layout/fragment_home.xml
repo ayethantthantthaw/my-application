@@ -1,41 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:id="@+id/home_frame"
-        android:layout_height="match_parent">
-    <ViewFlipper android:layout_width="match_parent"
-                 android:id="@+id/flipper"
-                 android:layout_marginTop="55dp"
-                 android:layout_gravity="center"
-                 android:layout_height="150dp">
-    </ViewFlipper>
-        <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rc_categories"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ViewFlipper android:layout_width="match_parent"
+                     android:id="@+id/flipper"
+                     android:layout_gravity="center"
+                     app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                     android:layout_height="150dp">
+        </ViewFlipper>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            >
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rc_categories"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                >
+
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v7.widget.CardView>
+            <android.support.v4.widget.NestedScrollView
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+            >
+
+            </android.support.v4.widget.NestedScrollView>
+            <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/rc7"
+                    android:background="#E3E3E3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
             </android.support.v7.widget.RecyclerView>
-        </android.support.v7.widget.CardView>
+            <ProgressBar android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:id="@+id/progress_home"/>
+        </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-            android:layout_marginTop="5dp"
-            android:id="@+id/rc7"
-            android:background="#E3E3E3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    </android.support.v4.widget.NestedScrollView>
 
-    </android.support.v7.widget.RecyclerView>
-    <ProgressBar android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_gravity="center"
-                 android:id="@+id/progress_home"/>
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
 
 

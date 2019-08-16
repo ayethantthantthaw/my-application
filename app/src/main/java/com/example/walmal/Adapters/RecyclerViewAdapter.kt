@@ -34,18 +34,18 @@ class RecyclerViewAdapter(private var list: List<Posts>, private var context: Co
       // Picasso.get().load(posts.product_image).into(p0.itemView.tvimage)
        // p0.title.text=posts.content
        Glide.with(context).load(posts.product_image).into(p0.itemView.tvimage)
-        p0.itemView.btn_addToCart.setOnClickListener {
-            val p=Intent(context!!, ActivityCart::class.java)
-
-            Product.id = posts.product_id.toString()
-            Product.img=posts.product_image
-            Product.title=posts.product_title
-            Product.price=posts.product_price
-            Product.qty=posts.product_qty
-            Product.product_content=posts.product_content
-            context!!.startActivity(p)
-            //Toast.makeText(context,"Added to cart successfully!",Toast.LENGTH_SHORT).show()
-        }
+//        p0.itemView.btn_addToCart.setOnClickListener {
+//            val p=Intent(context!!, ActivityCart::class.java)
+//
+//            Product.id = posts.product_id.toString()
+//            Product.img=posts.product_image
+//            Product.title=posts.product_title
+//            Product.price=posts.product_price
+//            Product.qty=posts.product_qty
+//            Product.product_content=posts.product_content
+//            context!!.startActivity(p)
+//            //Toast.makeText(context,"Added to cart successfully!",Toast.LENGTH_SHORT).show()
+//        }
 
         p0.itemView.tvimage.setOnClickListener {
             val p=Intent(context!!, Product_Detail::class.java)

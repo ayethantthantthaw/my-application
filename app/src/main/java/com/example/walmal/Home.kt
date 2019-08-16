@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.walmal.Adapters.Categories_RecyclerViewAdapter
+import com.example.walmal.Adapters.CategoriesListRecyclerViewAdapter
 import com.example.walmal.Adapters.RecyclerViewAdapter
 import com.example.walmal.post.*
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -31,6 +31,7 @@ class Home : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+
 
 
     }
@@ -98,7 +99,7 @@ class Home : Fragment() {
 
 
                 rc_categories.layoutManager=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
-                rc_categories.adapter= Categories_RecyclerViewAdapter(prodcat, context)
+                rc_categories.adapter= CategoriesListRecyclerViewAdapter(prodcat, context)
 
             }
         })

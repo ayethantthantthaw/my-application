@@ -4,7 +4,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:layout_marginTop="70dp"
-             tools:context=".Cart">
+             tools:context=".CartFragment">
     <android.support.v7.widget.RecyclerView
             android:id="@+id/rc3"
             android:layout_width="match_parent"

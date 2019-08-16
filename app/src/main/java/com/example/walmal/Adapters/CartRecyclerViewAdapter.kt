@@ -1,5 +1,6 @@
 package com.example.walmal.Adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -23,12 +24,15 @@ class CartRecyclerViewAdapter(private var list3: List<PostCart>, private var con
         return list3.size
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(p0: Myholder3, p1: Int) {
         val postCart=list3[p1]
-        p0.itemView.tvCart.text="$"+postCart.seller_name
+        p0.itemView.tvCart.text="$ ${postCart.seller_name}"
         Glide.with(context).load(postCart.product_image).into(p0.itemView.imgCart)
     }
 
-    class Myholder3(itemView: View): RecyclerView.ViewHolder(itemView) {}
+    class Myholder3(itemView: View): RecyclerView.ViewHolder(itemView) {
+
+    }
 
 }

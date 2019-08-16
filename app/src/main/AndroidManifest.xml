@@ -14,7 +14,7 @@
             android:usesCleartextTraffic="true">
         <activity android:name=".ActivityCart">
         </activity>
-        <activity android:name=".Categories">
+        <activity android:name=".CategoryActivity">
         </activity>
         <activity
                 android:name=".Product_Detail"

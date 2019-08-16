@@ -26,29 +26,34 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         }
 
-       setSupportActionBar(toolbar)
-       supportActionBar?.setDisplayShowTitleEnabled(true)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.menu)
 
 
-
-       /* val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer_layout.addDrawerListener(toggle)
-        toggle.syncState()*/
+        /* val toggle = ActionBarDrawerToggle(
+                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+         drawer_layout.addDrawerListener(toggle)
+         toggle.syncState()*/
 
         nav_view.setNavigationItemSelectedListener(this)
-        val toggle= object :ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close){
+        val toggle = object : ActionBarDrawerToggle(
+            this,
+            drawer_layout,
+            toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        ) {
             override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
                 super.onDrawerSlide(drawerView, slideOffset)
-                val slideX = drawerView.width*slideOffset
+                val slideX = drawerView.width * slideOffset
                 //Slide
                 //coordinator_layout.translationX = slideX
-                frame.translationX=slideX
+                frame.translationX = slideX
 
                 //home_frame.translationX=slideX
-               //fashion_frame.translationX=slideX
+                //fashion_frame.translationX=slideX
                 //Next style
                 //coordinator_layout.scaleX = 1-(slideOffset/5f)
                 //coordinator_layout.scaleY = 1-(slideOffset/5f)
@@ -95,17 +100,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.action_search ->{ return true}
+            R.id.action_search -> {
+                return true
+            }
             R.id.action_cart -> {
-                /*val newFragment = Cart()
+                /*val newFragment = CategoryFragment()
                 val transaction = supportFragmentManager.beginTransaction().apply {
                     replace(R.id.frame, newFragment)
 
                 }
                 transaction.commit()*/
-                val i=Intent(this@MainActivity,ActivityCart::class.java)
+                val i = Intent(this@MainActivity, ActivityCart::class.java)
                 startActivity(i)
-                return true}
+                return true
+            }
             else -> return super.onOptionsItemSelected(item)
         }
 
@@ -115,7 +123,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_login -> {
-                val login=Intent(this@MainActivity,Login::class.java)
+                val login = Intent(this@MainActivity, Login::class.java)
                 startActivity(login)
             }
             R.id.nav_home -> {
@@ -129,15 +137,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
 
-
             R.id.nav_share -> {
-                val intent=Intent()
-                intent.action=Intent.ACTION_SEND
-                intent.putExtra(Intent.EXTRA_TEXT,"Hello")
-                startActivity(Intent.createChooser(intent,"Share to:"))
+                val intent = Intent()
+                intent.action = Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello")
+                startActivity(Intent.createChooser(intent, "Share to:"))
 
             }
-            R.id.nav_contact->{
+            R.id.nav_contact -> {
                 val newFragment = Contact()
                 val transaction = supportFragmentManager.beginTransaction().apply {
                     replace(R.id.frame, newFragment)
@@ -145,7 +152,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
                 transaction.commit()
             }
-            R.id.event->{
+            R.id.event -> {
                 val newFragment = Event()
                 val transaction = supportFragmentManager.beginTransaction().apply {
                     replace(R.id.frame, newFragment)
@@ -153,7 +160,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
                 transaction.commit()
             }
-
 
 
         }
