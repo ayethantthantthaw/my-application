@@ -36,7 +36,7 @@ class CategoryRecyclerViewAdapter(private var list5: List<PostCd>, private var c
         p0.itemView.tvPrice5.text="$"+posts.product_price
        Glide.with(context).load(posts.product_image).into(p0.itemView.tvimage5)
 
-        p0.itemView.btn_addToCart5.setOnClickListener {
+        /*p0.itemView.btn_addToCart5.setOnClickListener {
             val p=Intent(context!!, ActivityCart::class.java)
 
             Product.id = posts.product_id.toString()
@@ -44,7 +44,7 @@ class CategoryRecyclerViewAdapter(private var list5: List<PostCd>, private var c
             Product.title=posts.product_title
             Product.price=posts.product_price
             Product.qty=posts.product_qty
-            context!!.startActivity(p) }
+            context!!.startActivity(p) }*/
         p0.itemView.tvimage5.setOnClickListener {
             val p=Intent(context!!, Product_Detail::class.java)
 

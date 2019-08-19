@@ -1,55 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginLeft="80dp"
         tools:context=".Product_Detail">
-    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:layout_width="match_parent"
-                      android:orientation="vertical"
-                      android:layout_height="wrap_content">
-            <ImageView
-                    android:layout_marginTop="50dp"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:id="@+id/imgProduct"/>
-            <LinearLayout android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical"
-                          android:gravity="center"
-                          android:layout_marginTop="50dp">
 
-           </LinearLayout>
+    <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/eventloc"
+    />
 
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:id="@+id/tv_product_title"/>
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:id="@+id/tv_product_price"/>
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_marginBottom="10dp"
-                      android:id="@+id/tv_product_qty"/>
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:id="@+id/tv_content"/>
-            <Button android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorAccent"
-                    android:text="Add To Cart"
-                    android:drawableLeft="@drawable/ic_launcher_cart_btn"
-                    android:textColor="#fff"
-                    android:id="@+id/btn_addCart"
-                    android:textAllCaps="false"/>
-            <android.support.v7.widget.RecyclerView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+    <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/imgProduct"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name :"
+        />
 
-            </android.support.v7.widget.RecyclerView>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+        <TextView
+                android:id="@+id/tv_product_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google Map"
+                android:layout_marginLeft="8dp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price :"
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_product_price"
+                android:text="$1000"
+                android:layout_marginLeft="8dp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llPrice"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available :"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tv_product_qty"
+                  android:text="2 items in stock"
+                  android:layout_marginLeft="8dp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llQuantity"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Content :"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_content"
+                android:text="Smooth"
+                android:layout_marginLeft="8dp"
+
+        />
+    </LinearLayout>
+    <View
+            android:id="@+id/viewBtn"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/llReview"
+            android:background="@color/colorPrimary"
+            android:layout_margin="16dp"
+            android:layout_centerHorizontal="true"
+
+    />
+    <Button android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_button"
+            android:text="Add To Cart"
+            android:drawableLeft="@drawable/ic_launcher_cart_btn"
+            android:textColor="#fff"
+            android:id="@+id/btn_addCart"
+            android:layout_below="@+id/viewBtn"
+            android:textAllCaps="false"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+    />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/imgProduct"
+            android:background="@color/colorPrimary"
+            android:layout_margin="16dp"
+
+    />
+</RelativeLayout>
