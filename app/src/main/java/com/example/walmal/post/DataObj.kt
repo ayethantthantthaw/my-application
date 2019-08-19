@@ -24,3 +24,7 @@ class CartDataObj(
     @SerializedName("data")
     val cart:List<PostCart>
 )
+class SearchDataObj(
+    @SerializedName("data")
+    val searchList: List<Posts>? = null
+)

@@ -1,7 +1,7 @@
 package com.example.walmal.post
 
 
-
+import com.example.walmal.Home
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -13,7 +13,8 @@ interface ApiService {
 
 interface ApiService2 {
     @GET("event.php")
-    fun getPosts(): Call<DataObj>}
+    fun getPosts(): Call<DataObj>
+}
 
 interface CategoriesApiService {
     @GET("category.php")
@@ -23,11 +24,18 @@ interface CategoriesApiService {
     fun getPostsCd(@Query("cat_id") cat: Int): Call<Cat_Detail_DataObject>
 
 }
-interface CartApiService{
-    
+
+interface CartApiService {
+
     @FormUrlEncoded
     @POST("cart_view.php")
-    fun getPostCart(@Field("cart_product_id")cart_product_id:String):Call<CartDataObj>
+    fun getPostCart(@Field("cart_product_id") cart_product_id: String): Call<CartDataObj>
 
 
+}
+
+interface SearchApiService {
+    @FormUrlEncoded
+    @POST("search.php")
+    fun getSearch(@Field("txtSearch") txtSearch: String): Call<SearchDataObj>
 }

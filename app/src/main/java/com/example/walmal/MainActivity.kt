@@ -101,6 +101,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
             R.id.action_search -> {
+                val intent = Intent(this@MainActivity, SearchActivity::class.java)
+                startActivity(intent)
                 return true
             }
             R.id.action_cart -> {
